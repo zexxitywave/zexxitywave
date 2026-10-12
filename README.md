@@ -4,7 +4,7 @@
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1200&color=7C3AED&center=true&vCenter=true&width=750&lines=Kafka+Saga+Orchestration+%7C+Event-Driven+Architecture;Microservices+%7C+CQRS+%7C+Outbox+Pattern;AWS+Serverless+%7C+Lambda+%7C+Textract+%7C+Bedrock;IoT+Pipelines+%7C+Time-Series+%7C+Real-Time+Alerts;Kubernetes+HPA+%7C+Zero-Downtime+Deployments)](https://github.com/zexxitywave)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1200&color=7C3AED&center=true&vCenter=true&width=750&lines=Event-Driven+Architecture+%7C+Kafka+Saga+Orchestration;Distributed+Microservices+%7C+Cloud-Native+Java;AWS+Serverless+%7C+Lambda+%7C+Scalable+Pipelines;Building+systems+that+scale+under+real+load)](https://github.com/zexxitywave)
 
 </div>
 
@@ -23,11 +23,11 @@
 ```yaml
 name        : Jagdish Kumar Sahu
 role        : Backend Engineer
-focus       : Distributed Systems · Event-Driven Architecture · Cloud-Native Java
+focus       : Event-Driven Architecture · Distributed Microservices · AWS · Scalable Systems
 currently   : Building Zexxity — a production-grade e-commerce platform on a
-              16-service Kafka microservices mesh with live Razorpay payments,
-              pgvector semantic search, and full Prometheus/Grafana observability
-interests   : Kafka Saga patterns · JVM performance · AWS serverless · IoT pipelines
+              16-service Kafka microservices mesh with live payments,
+              semantic search, and full observability
+interests   : Kafka Saga · Distributed Systems · AWS Serverless · Cloud-Native Java
 ```
 
 ---
