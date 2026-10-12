@@ -11,7 +11,7 @@
 <div align="center">
   <a href="https://github.com/zexxitywave?tab=followers"><img src="https://img.shields.io/github/followers/zexxitywave?style=for-the-badge&color=A855F7&labelColor=1a1a2e&label=Followers&logo=github" /></a>
   <a href="https://github.com/zexxitywave"><img src="https://img.shields.io/github/stars/zexxitywave?style=for-the-badge&color=A855F7&labelColor=1a1a2e&label=Stars&logo=github" /></a>
-  <img src="https://komarev.com/ghpvc/?username=zexxitywave&style=for-the-badge&color=A855F7&labelColor=1a1a2e&label=Profile+Views" />
+  <img src="https://komarev.com/ghpvc/?username=zexxitywave&style=for-the-badge&color=A855F7&labelColor=1a1a2e&label=Profile+Views&abbreviated=true" />
 </div>
 
 <br/>
