@@ -26,7 +26,7 @@
 
 | | |
 |:---|:---|
-| 🔭 **Currently Building** | Zexxity — 16-service Kafka microservices platform with saga orchestration, live Razorpay payments, pgvector semantic search & full observability |
+| 🔭 **Currently Building** | EventDrivenMesh — 16-service Kafka microservices platform with saga orchestration, live Razorpay payments, pgvector semantic search & full observability |
 | 🌱 **Focus** | Event-Driven Architecture · Distributed Microservices · AWS Serverless · Scalable Systems |
 | ⚡ **Interests** | Kafka Saga Patterns · JVM Performance · Cloud-Native Java · IoT Pipelines |
 | 📍 **Location** | Bhubaneswar, India |
