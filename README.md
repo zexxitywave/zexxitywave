@@ -1,127 +1,244 @@
 <div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=200&section=header&text=Jagdish%20Kumar%20Sahu&fontSize=48&fontColor=ffffff&fontAlignY=40&desc=Backend%20Engineer%20%E2%80%94%20Distributed%20Systems%20%7C%20Cloud-Native%20Java%20%7C%20Event-Driven%20Architecture&descSize=16&descAlignY=62&descColor=c9d1d9&animation=fadeIn" />
+</div>
 
-# Jagdish Kumar Sahu
+<div align="center">
 
-**Backend Engineer · Distributed Systems · Cloud-Native Java**
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1000&color=7C3AED&center=true&vCenter=true&width=750&lines=Building+production-grade+distributed+systems;Kafka+Saga+%7C+Microservices+%7C+Cloud-Native+Java;30%2C000+orders+processed+%E2%80%94+0%25+error+rate;606+msg%2Fs+peak+%E2%80%94+1.09M+Kafka+messages;AWS+Serverless+%7C+Lambda+%7C+Textract+%7C+Bedrock)](https://github.com/zexxitywave)
 
-[![Profile Views](https://komarev.com/ghpvc/?username=zexxitywave&style=flat-square&color=0d1117&label=Profile+Views)](https://github.com/zexxitywave)
+</div>
+
+<div align="center">
+
+[![GitHub followers](https://img.shields.io/github/followers/zexxitywave?style=flat-square&color=7C3AED&labelColor=0d1117&label=Followers)](https://github.com/zexxitywave?tab=followers)
+[![GitHub stars](https://img.shields.io/github/stars/zexxitywave?style=flat-square&color=7C3AED&labelColor=0d1117&label=Total%20Stars)](https://github.com/zexxitywave)
+[![Profile Views](https://komarev.com/ghpvc/?username=zexxitywave&style=flat-square&color=7C3AED&labelColor=0d1117&label=Profile+Views)](https://github.com/zexxitywave)
 
 </div>
 
 ---
 
-## About
+## `$ whoami`
 
-Backend engineer with a focus on distributed systems, event-driven architecture, and production-grade Java. I build systems designed for real load — not just demos. Most of my work involves Kafka-orchestrated microservices, cloud-native deployments, and full observability from the start.
-
-Currently building **Zexxity** — a complete e-commerce platform backed by a 16-service Kafka mesh with saga orchestration, live Razorpay payments, pgvector semantic search, and a Prometheus/Grafana observability stack.
-
----
-
-## Projects
-
-### [EventDrivenMesh](https://github.com/zexxitywave/EventDrivenMesh)
-> Event-driven e-commerce backend — 16 microservices, Kafka Saga, CQRS analytics, Kubernetes HPA
-
-Production-grade microservices platform built on Spring Boot 3 and Java 21. Services communicate asynchronously via Apache Kafka using a choreography-based saga pattern with full compensation on failure. A central API Gateway handles JWT validation and load-balanced routing via Eureka.
-
-**Key capabilities**
-- Kafka Saga with automatic compensating rollbacks across inventory → payment → shipping
-- Pre-payment delivery quoting — shipping-service geocodes the order address, routes via H3 zones, assigns carrier and ETA, and prices delivery before the customer pays
-- Semantic product search — pgvector with HNSW cosine index and Ollama `nomic-embed-text` (768-dim) embeddings; EmbeddingInitializer backfills at startup
-- PDF invoice generation — auto-generated on every order, attached to confirmation email, stored in MongoDB, downloadable anytime
-- CQRS analytics — dedicated PostgreSQL analytics DB, batch Kafka consumer at ~500 events/sec, poison pill detection with DLQ
-- Kubernetes HPA — CPU/memory scaling, zero-downtime rolling updates, pod anti-affinity, liveness/readiness probes
-- Full observability — Micrometer → Prometheus → Grafana (HTTP latency p50/p95/p99, Kafka consumer lag, JVM heap, HikariCP pool)
-- Load tested: 30,000 orders across two JMeter runs, 0% error rate, P50 < 30ms
-
-**Stack** `Java 21` `Spring Boot 3` `Apache Kafka` `PostgreSQL` `MongoDB` `Redis` `pgvector` `Ollama` `Razorpay` `Docker` `Kubernetes` `Prometheus` `Grafana` `GitHub Actions`
+```yaml
+name        : Jagdish Kumar Sahu
+role        : Backend Engineer
+focus       : Distributed Systems · Event-Driven Architecture · Cloud-Native Java
+currently   : Building Zexxity — a production-grade e-commerce platform on a
+              16-service Kafka microservices mesh with live Razorpay payments,
+              pgvector semantic search, and full Prometheus/Grafana observability
+interests   : Kafka Saga patterns · JVM performance · AWS serverless · IoT pipelines
+```
 
 ---
 
-### [EnerFlux](https://github.com/zexxitywave/EnerFlux)
-> Production-grade IoT energy monitoring — 606 msg/s peak, 1.09M Kafka messages, 0% error rate
+## `$ cat tech-stack.json`
 
-Real-time household energy monitoring system built with Spring Boot 4 and Java 21. Ingests device readings through a 3-stage Kafka pipeline, persists to InfluxDB time-series, classifies WARNING/CRITICAL alerts via 1-hour rolling aggregations, and delivers billing projections via async email.
+<div align="center">
 
-**Key capabilities**
-- 3-stage Kafka pipeline: ingestion-service → usage-service (InfluxDB) → alert-service (email)
-- 606 req/s peak ingestion, 1,091,258 total Kafka messages, 129,500+ InfluxDB data points, 0 failures
-- Manual Kafka ack only after InfluxDB write — zero data loss under broker or DB downtime
-- 5-second rolling aggregation scheduler with 1-hour per-user alert cooldown
-- AWS S3 complaint uploads — parallel `CompletableFuture` processing, 1,450 requests at 0% error
-- Chaos tested: killed Kafka, InfluxDB, and ingestion-service mid-load — all recovered without data loss
-- 4 Grafana dashboards (33 panels), 19 Prometheus alert rules, custom Micrometer counters
-- JVM profiled under load: heap at 3%, GC pauses at 0.09ms avg, 0 blocked threads
+**Languages & Core**
 
-**Stack** `Java 21` `Spring Boot 4` `Apache Kafka` `InfluxDB` `PostgreSQL` `AWS S3` `Keycloak` `Resilience4j` `Prometheus` `Grafana` `Docker`
+![Java](https://img.shields.io/badge/Java_21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
----
+**Frameworks & Libraries**
 
-### [invoice-processing](https://github.com/zexxitywave/invoice-processing)
-> Serverless AI-powered invoice automation — AWS Lambda + Textract + Bedrock, human-in-the-loop review
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+![Spring Cloud](https://img.shields.io/badge/Spring_Cloud-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![Spring Security](https://img.shields.io/badge/Spring_Security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white)
+![React](https://img.shields.io/badge/React_19-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white)
+![Resilience4j](https://img.shields.io/badge/Resilience4j-000000?style=for-the-badge&logo=java&logoColor=white)
+![Lombok](https://img.shields.io/badge/Lombok-ED2B2B?style=for-the-badge&logo=java&logoColor=white)
 
-Fully serverless invoice processing pipeline on AWS (ap-south-1). Vendors email PDFs to `invoices@zexxity.online` — SES ingests them, EventBridge triggers the Lambda pipeline, Textract extracts fields with per-field confidence scores, Bedrock Nova-Lite validates and risk-scores, and a deterministic rule engine auto-approves or routes to human review.
+**Messaging & Streaming**
 
-**Key capabilities**
-- Textract `AnalyzeExpense` with confidence scoring; retries with jittered backoff on rate limits
-- Auto-approval only when: confidence ≥ 95%, no missing fields, line-item math checks out, Bedrock agrees
-- Human-in-the-loop — review dashboard + one-click approve/reject via 72-hour signed email tokens
-- Idempotent extraction — dedupes on `invoiceId`/`objectKey`, safe for EventBridge at-least-once delivery
-- 10 Lambda functions: extraction, SES ingest, review, token approval, upload URL, daily digest, escalation cleanup, S3 cleanup, warm-up
-- React 19 frontend on AWS Amplify — dashboard, upload, review queue, full audit log with CSV export
-- Daily digest and 72-hour escalation emails via Brevo
-
-**Stack** `Java 21` `AWS Lambda` `Amazon Textract` `Amazon Bedrock (Nova-Lite)` `Amazon DynamoDB` `Amazon SES` `AWS S3` `API Gateway` `React 19` `AWS Amplify` `Brevo` `SAM / CloudFormation`
-
----
-
-## Tech Stack
-
-**Languages**
-
-![Java](https://img.shields.io/badge/Java_21-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-
-**Backend & Messaging**
-
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
-![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
-![Spring Cloud](https://img.shields.io/badge/Spring_Cloud-6DB33F?style=flat-square&logo=spring&logoColor=white)
+![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
+![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white)
 
 **Databases**
 
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
-![InfluxDB](https://img.shields.io/badge/InfluxDB-22ADF6?style=flat-square&logo=influxdb&logoColor=white)
-![DynamoDB](https://img.shields.io/badge/DynamoDB-4053D6?style=flat-square&logo=amazondynamodb&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![InfluxDB](https://img.shields.io/badge/InfluxDB-22ADF6?style=for-the-badge&logo=influxdb&logoColor=white)
+![DynamoDB](https://img.shields.io/badge/DynamoDB-4053D6?style=for-the-badge&logo=amazondynamodb&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
-**Cloud & Infrastructure**
+**Cloud — AWS**
 
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![AWS Lambda](https://img.shields.io/badge/AWS_Lambda-FF9900?style=for-the-badge&logo=awslambda&logoColor=white)
+![Amazon S3](https://img.shields.io/badge/Amazon_S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white)
+![Amazon SES](https://img.shields.io/badge/Amazon_SES-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
+![API Gateway](https://img.shields.io/badge/API_Gateway-FF4F8B?style=for-the-badge&logo=amazonaws&logoColor=white)
+![AWS Textract](https://img.shields.io/badge/AWS_Textract-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
+![Amazon Bedrock](https://img.shields.io/badge/Amazon_Bedrock-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
+![AWS Amplify](https://img.shields.io/badge/AWS_Amplify-FF9900?style=for-the-badge&logo=awsamplify&logoColor=white)
+![EventBridge](https://img.shields.io/badge/EventBridge-FF4F8B?style=for-the-badge&logo=amazonaws&logoColor=white)
+![CloudWatch](https://img.shields.io/badge/CloudWatch-FF4F8B?style=for-the-badge&logo=amazonaws&logoColor=white)
+
+**DevOps & Infrastructure**
+
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
+![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
 
 **Observability**
 
-![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white)
-![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
+![Micrometer](https://img.shields.io/badge/Micrometer-2C5263?style=for-the-badge&logo=java&logoColor=white)
 
----
+**Security & Auth**
 
-## GitHub Stats
+![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
+![OAuth2](https://img.shields.io/badge/OAuth2-EB5424?style=for-the-badge&logo=auth0&logoColor=white)
+![Keycloak](https://img.shields.io/badge/Keycloak-4D4D4D?style=for-the-badge&logo=keycloak&logoColor=white)
 
-<div align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=zexxitywave&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zexxitywave&layout=compact&theme=github_dark&hide_border=true&langs_count=6" />
+**Tools**
+
+![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![JMeter](https://img.shields.io/badge/Apache_JMeter-D22128?style=for-the-badge&logo=apache&logoColor=white)
+
 </div>
 
 ---
 
-## Contact
+## `$ ls -la projects/`
 
-Open to backend engineering roles focused on distributed systems, platform engineering, or cloud-native Java.
+<table>
+<tr>
+<td width="50%" valign="top">
 
-[![GitHub](https://img.shields.io/badge/GitHub-zexxitywave-181717?style=flat-square&logo=github)](https://github.com/zexxitywave)
+### 🛒 [EventDrivenMesh](https://github.com/zexxitywave/EventDrivenMesh)
+**E-commerce backend · 16 microservices · Kafka Saga**
+
+Production-grade e-commerce platform on Spring Boot 3 + Java 21. Kafka choreography-based saga with automatic compensating rollbacks. JWT auth at the gateway, polyglot persistence, Kubernetes HPA.
+
+```
+📦 16 microservices
+⚡ 30,000 orders — 0% error rate
+🚀 P50 < 30ms under sustained load
+🔍 pgvector semantic search (768-dim)
+📄 Auto PDF invoice on every order
+☸️  Kubernetes HPA · zero-downtime deploys
+📊 Prometheus + Grafana observability
+```
+
+![Java](https://img.shields.io/badge/Java_21-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![Kafka](https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
+![K8s](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![Razorpay](https://img.shields.io/badge/Razorpay-02042B?style=flat-square&logo=razorpay&logoColor=white)
+![pgvector](https://img.shields.io/badge/pgvector-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+
+</td>
+<td width="50%" valign="top">
+
+### ⚡ [EnerFlux](https://github.com/zexxitywave/EnerFlux)
+**IoT energy monitoring · 606 msg/s · 1.09M Kafka messages**
+
+Production-grade IoT pipeline on Spring Boot 4. 3-stage Kafka pipeline → InfluxDB time-series → WARNING/CRITICAL alerts → async email with billing projections. Chaos tested — zero data loss.
+
+```
+📡 606 req/s peak · 0 failures
+💾 1,091,258 Kafka messages processed
+📈 129,500+ InfluxDB data points
+🔥 GC pauses 0.09ms avg under load
+☁️  AWS S3 · 1,450 uploads · 0% error
+📊 4 Grafana dashboards · 19 alert rules
+```
+
+![Java](https://img.shields.io/badge/Java_21-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![Kafka](https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
+![InfluxDB](https://img.shields.io/badge/InfluxDB-22ADF6?style=flat-square&logo=influxdb&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
+![Keycloak](https://img.shields.io/badge/Keycloak-4D4D4D?style=flat-square&logo=keycloak&logoColor=white)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🤖 [invoice-processing](https://github.com/zexxitywave/invoice-processing)
+**Serverless AI invoice automation · AWS Lambda + Textract + Bedrock**
+
+Fully serverless invoice pipeline on AWS. Email → SES → Textract (confidence scoring) → Bedrock Nova-Lite (risk score) → auto-approve or human-in-the-loop review via React 19 dashboard or one-click email tokens.
+
+```
+☁️  10 Lambda functions · fully serverless
+🧠 Textract + Bedrock Nova-Lite pipeline
+✅ Auto-approve at ≥95% confidence
+👤 Human-in-the-loop review dashboard
+🔗 72-hour signed email approval tokens
+📱 React 19 frontend · AWS Amplify hosted
+```
+
+![Java](https://img.shields.io/badge/Java_21-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![Lambda](https://img.shields.io/badge/AWS_Lambda-FF9900?style=flat-square&logo=awslambda&logoColor=white)
+![React](https://img.shields.io/badge/React_19-61DAFB?style=flat-square&logo=react&logoColor=black)
+![DynamoDB](https://img.shields.io/badge/DynamoDB-4053D6?style=flat-square&logo=amazondynamodb&logoColor=white)
+![Textract](https://img.shields.io/badge/Textract-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
+
+</td>
+<td width="50%" valign="top">
+
+### 🏦 Banking Microservices
+**Scalable banking backend · financial transactions at scale**
+
+Microservice-based banking application simulating real-world financial transactions and account management.
+
+```
+💳 Account management
+💸 Financial transactions
+🔐 Secure JWT authentication
+📊 Transaction history & reporting
+🔄 Inter-service REST communication
+```
+
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![Spring](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+
+</td>
+</tr>
+</table>
+
+---
+
+## `$ git log --oneline --stats`
+
+<div align="center">
+  <img height="180" src="https://github-readme-stats.vercel.app/api?username=zexxitywave&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true&title_color=7C3AED&icon_color=7C3AED&text_color=c9d1d9&bg_color=0d1117" />
+  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zexxitywave&layout=compact&theme=tokyonight&hide_border=true&langs_count=6&title_color=7C3AED&text_color=c9d1d9&bg_color=0d1117" />
+</div>
+
+<div align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=zexxitywave&theme=tokyonight&hide_border=true&background=0d1117&ring=7C3AED&fire=7C3AED&currStreakLabel=7C3AED" />
+</div>
+
+---
+
+## `$ ping jagdish`
+
+<div align="center">
+
+[![GitHub](https://img.shields.io/badge/GitHub-zexxitywave-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/zexxitywave)
+
+*Open to backend engineering roles — distributed systems, platform engineering, cloud-native Java*
+
+</div>
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:24243e,50:302b63,100:0f0c29&height=120&section=footer" />
+</div>
