@@ -4,7 +4,7 @@
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1200&color=7C3AED&center=true&vCenter=true&width=750&lines=Event-Driven+Architecture+%7C+Kafka+Saga+Orchestration;Distributed+Microservices+%7C+Cloud-Native+Java;AWS+Serverless+%7C+Lambda+%7C+Scalable+Pipelines;Building+systems+that+scale+under+real+load)](https://github.com/zexxitywave)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1200&color=7C3AED&center=true&vCenter=true&width=750&lines=Event-Driven+Architecture+%7C+Kafka+Saga+Orchestration;Distributed+Microservices;Scalable+Pipelines+%7C+Cloud-Native+Java)](https://github.com/zexxitywave)
 
 </div>
 
