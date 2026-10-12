@@ -192,23 +192,24 @@ Fully serverless invoice pipeline on AWS. Email → SES → Textract (confidence
 </td>
 <td width="50%" valign="top">
 
-### 🏦 Banking Microservices
-**Scalable banking backend · financial transactions at scale**
+### ⚖️ [Flow-Balancer](https://github.com/zexxitywave/Flow-balancer)
+**Multithreaded load balancer in pure Java · WRR + Least-Connections**
 
-Microservice-based banking application simulating real-world financial transactions and account management.
+Application-level load balancer built from scratch in pure Java — no frameworks. Distributes requests across 5 workers using Weighted Round-Robin or Least-Connections. Per-worker connection pooling, auto health checks, crashed worker auto-restart, and a live terminal dashboard refreshing every 2s.
 
 ```
-💳 Account management
-💸 Financial transactions
-🔐 Secure JWT authentication
-📊 Transaction history & reporting
-🔄 Inter-service REST communication
+🔀 WRR (3:2:2:1:1) + Least-Connections algorithms
+⚡ 113 req/s · 7,929 requests · 96.66% success rate
+🏊 Per-worker PostgreSQL connection pool (20 conn each)
+💓 Auto health checks + crashed worker auto-restart
+📊 Live terminal dashboard — status, load, latency, uptime
+📝 Request logging to console + lb_requests.log
 ```
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![Spring](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Multithreading](https://img.shields.io/badge/Multithreading-000000?style=flat-square&logo=java&logoColor=white)
+![Sockets](https://img.shields.io/badge/TCP_Sockets-00599C?style=flat-square&logo=java&logoColor=white)
 
 </td>
 </tr>
