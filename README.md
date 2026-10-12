@@ -4,7 +4,7 @@
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1000&color=7C3AED&center=true&vCenter=true&width=750&lines=Building+production-grade+distributed+systems;Kafka+Saga+%7C+Microservices+%7C+Cloud-Native+Java;30%2C000+orders+processed+%E2%80%94+0%25+error+rate;606+msg%2Fs+peak+%E2%80%94+1.09M+Kafka+messages;AWS+Serverless+%7C+Lambda+%7C+Textract+%7C+Bedrock)](https://github.com/zexxitywave)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1200&color=7C3AED&center=true&vCenter=true&width=750&lines=Kafka+Saga+Orchestration+%7C+Event-Driven+Architecture;Microservices+%7C+CQRS+%7C+Outbox+Pattern;AWS+Serverless+%7C+Lambda+%7C+Textract+%7C+Bedrock;IoT+Pipelines+%7C+Time-Series+%7C+Real-Time+Alerts;Kubernetes+HPA+%7C+Zero-Downtime+Deployments)](https://github.com/zexxitywave)
 
 </div>
 
@@ -54,7 +54,6 @@ interests   : Kafka Saga patterns · JVM performance · AWS serverless · IoT pi
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white)
 ![Resilience4j](https://img.shields.io/badge/Resilience4j-000000?style=for-the-badge&logo=java&logoColor=white)
-![Lombok](https://img.shields.io/badge/Lombok-ED2B2B?style=for-the-badge&logo=java&logoColor=white)
 
 **Messaging & Streaming**
 
@@ -121,47 +120,50 @@ interests   : Kafka Saga patterns · JVM performance · AWS serverless · IoT pi
 <td width="50%" valign="top">
 
 ### 🛒 [EventDrivenMesh](https://github.com/zexxitywave/EventDrivenMesh)
-**E-commerce backend · 16 microservices · Kafka Saga**
 
-Production-grade e-commerce platform on Spring Boot 3 + Java 21. Kafka choreography-based saga with automatic compensating rollbacks. JWT auth at the gateway, polyglot persistence, Kubernetes HPA.
+**Event-Driven E-Commerce · Kafka Saga · 16 Microservices**
 
-```
-📦 16 microservices
-⚡ 30,000 orders — 0% error rate
-🚀 P50 < 30ms under sustained load
-🔍 pgvector semantic search (768-dim)
-📄 Auto PDF invoice on every order
-☸️  Kubernetes HPA · zero-downtime deploys
-📊 Prometheus + Grafana observability
-```
+Production-grade e-commerce backend on Spring Boot 3 + Java 21. Built around a choreography-based Kafka saga with automatic compensating transactions — inventory reservation, payment capture, and shipping all communicate asynchronously with full rollback on failure.
+
+**Architecture highlights**
+- Transactional Outbox pattern — guaranteed at-least-once delivery
+- Polyglot persistence — PostgreSQL, MongoDB, Redis per service
+- Gateway-level JWT auth — validated once, trusted downstream
+- pgvector semantic search — HNSW cosine index, 768-dim embeddings
+- CQRS analytics — dedicated read DB, batch Kafka consumer
+- Kubernetes HPA — CPU/memory autoscaling, zero-downtime rollouts
+- PDF invoice auto-generated and emailed on every order
+- Prometheus + Grafana — HTTP latency, Kafka lag, JVM, HikariCP
 
 ![Java](https://img.shields.io/badge/Java_21-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
 ![Kafka](https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
 ![K8s](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
-![Razorpay](https://img.shields.io/badge/Razorpay-02042B?style=flat-square&logo=razorpay&logoColor=white)
+![Spring](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
 ![pgvector](https://img.shields.io/badge/pgvector-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 
 </td>
 <td width="50%" valign="top">
 
 ### ⚡ [EnerFlux](https://github.com/zexxitywave/EnerFlux)
-**IoT energy monitoring · 606 msg/s · 1.09M Kafka messages**
 
-Production-grade IoT pipeline on Spring Boot 4. 3-stage Kafka pipeline → InfluxDB time-series → WARNING/CRITICAL alerts → async email with billing projections. Chaos tested — zero data loss.
+**IoT Energy Monitoring · 3-Stage Kafka Pipeline · Real-Time Alerts**
 
-```
-📡 606 req/s peak · 0 failures
-💾 1,091,258 Kafka messages processed
-📈 129,500+ InfluxDB data points
-🔥 GC pauses 0.09ms avg under load
-☁️  AWS S3 · 1,450 uploads · 0% error
-📊 4 Grafana dashboards · 19 alert rules
-```
+Production-grade IoT monitoring system on Spring Boot 4 + Java 21. A 3-stage Kafka pipeline ingests device energy readings, persists to InfluxDB time-series, classifies WARNING/CRITICAL thresholds via rolling aggregations, and delivers async email alerts with billing projections.
+
+**Architecture highlights**
+- Manual Kafka ack after InfluxDB write — zero data loss guarantee
+- 1-hour rolling aggregation scheduler — per-user threshold classification
+- Round-robin partitioning across 5 consumers for full parallelism
+- Async SMTP email — consumer threads never blocked on delivery
+- AWS S3 parallel complaint uploads — `CompletableFuture` pipeline
+- Circuit breaker at API Gateway via Resilience4j
+- Keycloak OAuth2 / JWT authentication
+- 4 Grafana dashboards · 19 Prometheus alert rules · custom Micrometer metrics
 
 ![Java](https://img.shields.io/badge/Java_21-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
 ![Kafka](https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
 ![InfluxDB](https://img.shields.io/badge/InfluxDB-22ADF6?style=flat-square&logo=influxdb&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS_S3-569A31?style=flat-square&logo=amazons3&logoColor=white)
 ![Keycloak](https://img.shields.io/badge/Keycloak-4D4D4D?style=flat-square&logo=keycloak&logoColor=white)
 
 </td>
@@ -170,46 +172,49 @@ Production-grade IoT pipeline on Spring Boot 4. 3-stage Kafka pipeline → Influ
 <td width="50%" valign="top">
 
 ### 🤖 [invoice-processing](https://github.com/zexxitywave/invoice-processing)
-**Serverless AI invoice automation · AWS Lambda + Textract + Bedrock**
 
-Fully serverless invoice pipeline on AWS. Email → SES → Textract (confidence scoring) → Bedrock Nova-Lite (risk score) → auto-approve or human-in-the-loop review via React 19 dashboard or one-click email tokens.
+**Serverless AI Invoice Automation · AWS Lambda + Textract + Bedrock**
 
-```
-☁️  10 Lambda functions · fully serverless
-🧠 Textract + Bedrock Nova-Lite pipeline
-✅ Auto-approve at ≥95% confidence
-👤 Human-in-the-loop review dashboard
-🔗 72-hour signed email approval tokens
-📱 React 19 frontend · AWS Amplify hosted
-```
+Fully serverless invoice pipeline on AWS (ap-south-1). Vendors email PDFs to a dedicated inbox — SES ingests, Textract extracts with per-field confidence scoring, Bedrock Nova-Lite validates and risk-scores, and a deterministic rule engine auto-approves or routes to a human reviewer.
+
+**Architecture highlights**
+- 10 Lambda functions — extraction, review, token approval, digest, cleanup, warm-up
+- Idempotent extraction — deduped on `invoiceId` / `objectKey` for at-least-once safety
+- Human-in-the-loop — React 19 dashboard + 72-hour signed email approval tokens
+- Daily digest + 72-hour escalation via EventBridge scheduled triggers
+- Warm-up Lambda keeps 4 interactive functions hot every 5 minutes
+- React 19 SPA hosted on AWS Amplify — auto-deploys on push to main
+- Full audit trail with CSV export
 
 ![Java](https://img.shields.io/badge/Java_21-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
 ![Lambda](https://img.shields.io/badge/AWS_Lambda-FF9900?style=flat-square&logo=awslambda&logoColor=white)
+![Bedrock](https://img.shields.io/badge/Bedrock-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
 ![React](https://img.shields.io/badge/React_19-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![DynamoDB](https://img.shields.io/badge/DynamoDB-4053D6?style=flat-square&logo=amazondynamodb&logoColor=white)
-![Textract](https://img.shields.io/badge/Textract-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
 
 </td>
 <td width="50%" valign="top">
 
 ### ⚖️ [Flow-Balancer](https://github.com/zexxitywave/Flow-balancer)
-**Multithreaded load balancer in pure Java · WRR + Least-Connections**
 
-Application-level load balancer built from scratch in pure Java — no frameworks. Distributes requests across 5 workers using Weighted Round-Robin or Least-Connections. Per-worker connection pooling, auto health checks, crashed worker auto-restart, and a live terminal dashboard refreshing every 2s.
+**Multithreaded Load Balancer · Pure Java · WRR + Least-Connections**
 
-```
-🔀 WRR (3:2:2:1:1) + Least-Connections algorithms
-⚡ 113 req/s · 7,929 requests · 96.66% success rate
-🏊 Per-worker PostgreSQL connection pool (20 conn each)
-💓 Auto health checks + crashed worker auto-restart
-📊 Live terminal dashboard — status, load, latency, uptime
-📝 Request logging to console + lb_requests.log
-```
+Application-level TCP load balancer built from scratch in pure Java — no frameworks, no libraries. Full socket-level request forwarding across 5 worker processes, each backed by a thread-safe PostgreSQL connection pool.
+
+**Architecture highlights**
+- Weighted Round-Robin and Least-Connections scheduling algorithms
+- Per-worker thread-safe connection pool — stale connections auto-reconnected
+- Automatic health checks — dead workers marked DOWN, live workers resumed
+- Crashed worker auto-restart via `ProcessBuilder`
+- Live terminal dashboard — status, weight, active load, avg latency, uptime per worker
+- Graceful shutdown — waits up to 10s for in-flight requests before exit
+- Built-in load test client — configurable threads, duration, P50/P90/P95/P99 reporting
+- All queries via `PreparedStatement` — SQL injection prevented by design
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Multithreading](https://img.shields.io/badge/Multithreading-000000?style=flat-square&logo=java&logoColor=white)
-![Sockets](https://img.shields.io/badge/TCP_Sockets-00599C?style=flat-square&logo=java&logoColor=white)
+![TCP](https://img.shields.io/badge/TCP_Sockets-00599C?style=flat-square&logo=java&logoColor=white)
+![Multithreading](https://img.shields.io/badge/Multithreading-7C3AED?style=flat-square&logo=java&logoColor=white)
 
 </td>
 </tr>
